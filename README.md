@@ -12,6 +12,7 @@ This project is a Spring Boot starter template designed with a layered architect
 - **Docker**: A containerization platform that simplifies the deployment process.
 - **Flyway**: A database migration tool that helps version control database schema.
 - **MySQL**: A widely used open-source relational database management system.
+- **H2**: A open-source in-memory relational database management system.
 - **Hibernate**: An object-relational mapping (ORM) framework for Java.
 
 ## Project Structure
