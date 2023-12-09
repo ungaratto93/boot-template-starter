@@ -1,13 +1,13 @@
-package br.com.ungaratto93.demolayered;
+package br.com.ungaratto93.layers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoLayeredApplication {
+public class LayersApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoLayeredApplication.class, args);
+		SpringApplication.run(LayersApplication.class, args);
 	}
 
 }

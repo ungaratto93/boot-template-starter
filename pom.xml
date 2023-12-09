@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.ungaratto93</groupId>
-	<artifactId>demo-layered</artifactId>
+	<artifactId>layers</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo-layered</name>
+	<name>layers</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

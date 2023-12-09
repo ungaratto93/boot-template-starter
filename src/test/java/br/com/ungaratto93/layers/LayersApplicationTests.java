@@ -1,10 +1,10 @@
-package br.com.ungaratto93.demolayered;
+package br.com.ungaratto93.layers;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoLayeredApplicationTests {
+class LayersApplicationTests {
 
 	@Test
 	void contextLoads() {
