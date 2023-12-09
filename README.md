@@ -1,47 +1,55 @@
-# demo-layered
+# Spring Boot Layered Template with Docker, Flyway, and MySQL
 
-## Reutilizando um Template Spring Boot em Outro Repositório
+![Layers Logo](https://github.com/ungaratto93/layers/raw/main/layers-logo.png)
 
-Você pode reutilizar um template de aplicação Spring Boot em outro repositório seguindo estes passos:
+## About
 
-### 1. Clone o Repositório Original:
+This project is a Spring Boot starter template designed with a layered architectural pattern for building RESTful APIs. It incorporates key technologies such as Docker for containerization, Flyway for database versioning, MySQL as the relational database, and Hibernate for data persistence.
 
-Clone o repositório que contém o template Spring Boot para o seu ambiente local.
+## Technologies Used
 
-```bash
-git clone <URL_DO_REPOSITORIO_TEMPLATE>
-```
+- **Spring Boot**: A powerful framework for building Java-based enterprise applications.
+- **Docker**: A containerization platform that simplifies the deployment process.
+- **Flyway**: A database migration tool that helps version control database schema.
+- **MySQL**: A widely used open-source relational database management system.
+- **Hibernate**: An object-relational mapping (ORM) framework for Java.
 
-### 2. Crie um Novo Repositório:
+## Project Structure
 
-Crie um novo repositório no GitHub (ou em outra plataforma de hospedagem de código) onde você deseja usar o template.
+The project follows a layered architecture to promote modularity and maintainability. The main layers include:
 
-### 3. Remova a Origem Antiga:
+1. **Controller Layer**: Handles incoming HTTP requests, processes them, and returns appropriate responses.
+2. **Service Layer**: Contains the business logic, acting as an intermediary between controllers and repositories.
+3. **Repository Layer**: Manages data access and interacts with the database.
+4. **Model Layer**: Represents the data structure and entities.
 
-Remova a referência remota ao repositório original para evitar confusões.
+## Getting Started
 
-```bash
-git remote remove origin
-```
+### Prerequisites
 
-### 4. Vincule ao Novo Repositório:
+1. [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html)
+2. [Docker](https://www.docker.com/get-started)
 
-Vincule o repositório clonado ao novo repositório que você criou.
 
-```bash
-git remote add origin <URL_DO_NOVO_REPOSITORIO>
-```
+## How to Use as a Starter Template
 
-### 5. Empurre para o Novo Repositório:
+To use this template as a starting point for your Spring Boot project:
 
-Empurre as alterações para o novo repositório.
+1. Clone the repository:
 
-```bash
-git push -u origin master
-```
+    ```bash
+    git clone https://github.com/ungaratto93/layers.git
+    ```
 
-### 6. Personalize conforme Necessário:
+2. Replace the existing code with your application-specific logic.
+3. Customize the `application.properties` file in the `src/main/resources` directory for your database configuration.
+4. Add additional layers or modify the existing ones based on your project requirements.
+5. Build and run your customized application.
 
-Faça as personalizações necessárias no novo repositório, como ajustar o `README`, alterar o nome do projeto, etc.
+## Contributing
 
-Ao seguir esses passos, você terá reutilizado o template de aplicação Spring Boot em um novo repositório. Certifique-se de verificar e ajustar quaisquer configurações específicas do projeto ou referências ao antigo repositório para garantir que tudo funcione corretamente no novo contexto.
+Contributions are welcome! Feel free to open issues or submit pull requests for any enhancements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ungaratto93/layers/blob/main/LICENSE) file for details.
