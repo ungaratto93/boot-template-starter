@@ -1,4 +1,4 @@
-package br.com.ungaratto93.layers;
+package br.com.ungaratto93.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

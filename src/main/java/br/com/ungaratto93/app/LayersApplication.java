@@ -1,4 +1,4 @@
-package br.com.ungaratto93.layers;
+package br.com.ungaratto93.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
