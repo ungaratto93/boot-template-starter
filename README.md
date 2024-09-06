@@ -1,6 +1,5 @@
 # Spring Boot Layered Template with Docker, Flyway, and MySQL
 
-![Layers Logo](https://github.com/ungaratto93/layers/raw/main/layers-logo.png)
 
 ## About
 
@@ -53,4 +52,5 @@ Contributions are welcome! Feel free to open issues or submit pull requests for 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/ungaratto93/layers/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License
+
