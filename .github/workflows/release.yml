@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Set up Git
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+      
+      - name: Set timestamp
+        id: timestamp
+        run: echo "::set-output name=ts::$(date +%y.%m.%d)"
+          
+      - name: Create Release Tag
+        id: create_tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "RELEASE_DATE=$(date +%y.%m.%d)" >> ${GITHUB_ENV}
+          echo ${{github.env.GITHUB_ENV}}
+          git tag $(date +%y.%m.%d)
+          git push origin $(date +%y.%m.%d)
+      - name: Create GitHub release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.timestamp.outputs.ts }}
+          release_name: Release ${{ steps.timestamp.outputs.ts }}
+          body: "Automatic release with timestamp :rocket: "
+          draft: false
+          prerelease: false
